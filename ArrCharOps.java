@@ -75,7 +75,7 @@ public class ArrCharOps {
     public static int indexOf(char[] arr, char ch) {
         // Replace the following statement with your code
         for (int i = 0; i < arr.length; i++) {
-            if (charAt(arr, i) == ch) {
+            if (arr[i] == ch) {
                 return i;
             }
         }
@@ -88,8 +88,8 @@ public class ArrCharOps {
     public static int indexOf(char[] arr, char ch, int fromIndex) {
         // Replace the following statement with your code
         for (int i = fromIndex; i < arr.length; i++) {
-            if (charAt(arr, fromIndex) == ch) {
-                return fromIndex;
+            if (arr[i] == ch) {
+                return i;
             }
         }
         return -1;
