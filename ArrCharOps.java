@@ -102,9 +102,11 @@ public class ArrCharOps {
      */
     public static int lastIndexOf(char[] arr, char ch) {
         // Replace the following statement with your code
-        int num = arr.length;
-        if (num > 0) {
-            return arr[num - 1];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == ch) {
+                return i;
+            }
         }
         return -1;
     }
