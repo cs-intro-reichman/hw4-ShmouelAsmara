@@ -52,19 +52,19 @@ public class ArrCharOps {
     public static boolean equals(char[] arr1, char[] arr2) {
         // Replace the following statement with your code
         int counter = 0;
-        if (arr1.length == arr2.length) {
-            for (int i = 0; i < arr1.length; i++) {
-                if (charAt(arr1, i) == charAt(arr2, i)) {
-                    counter++;
-                }
-                if (counter == arr1.length) {
-                    return true;
-                } else {
-                    return false;
-                }
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            if (charAt(arr1, i) == charAt(arr2, i)) {
+                counter++;
             }
         }
-        return false;
+        if (counter == arr1.length) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
