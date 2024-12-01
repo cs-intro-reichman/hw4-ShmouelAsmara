@@ -10,18 +10,18 @@ public class Primes {
         int counter = 0;
         int present = 0;
 
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i <= n; i++) {
             prime[i] = true;
         }
 
-        for (int i = 2; i * i < n; i++) {
+        for (int i = 2; i * i <= n; i++) {
             for (int j = i * i; j < n; j += i) {
                 prime[j] = false;
             }
         }
 
         System.out.println("Prime numbers up to " + n + ":");
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i <= n; i++) {
             if (prime[i] == true) {
                 counter++;
                 System.out.println(i);
