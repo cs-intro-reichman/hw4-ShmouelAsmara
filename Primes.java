@@ -15,7 +15,7 @@ public class Primes {
         }
 
         for (int i = 2; i * i <= n; i++) {
-            for (int j = i * i; j < n; j += i) {
+            for (int j = i * i; j <= n; j += i) {
                 prime[j] = false;
             }
         }
